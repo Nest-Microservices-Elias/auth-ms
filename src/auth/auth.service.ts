@@ -18,7 +18,7 @@ export class AuthService {
       if (user) {
         throw new RpcException({
           status: 400,
-          message: 'uaser already exists',
+          message: 'User already exists',
         })
       }
       const newUser = await this.prisma.user.create({
