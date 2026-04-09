@@ -28,7 +28,6 @@ export class AuthService {
         token: await this.signJWT(user),
       }
     } catch (error) {
-      console.log(error)
       throw new RpcException({
         status: 401,
         message: 'Invalid Token',
